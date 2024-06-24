@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fire/core/ff_function.dart';
+import 'package:flutter_fire/module/form/form_screen.dart';
 
 class DashboardState with ChangeNotifier {
   BuildContext context;
@@ -21,5 +22,10 @@ class DashboardState with ChangeNotifier {
 
   logout() {
     fffunction.signOutFromGoogle(context);
+  }
+
+  edit() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const FormScreen()));
   }
 }

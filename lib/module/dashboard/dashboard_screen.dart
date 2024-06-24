@@ -59,7 +59,21 @@ class DashboardScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   child: TextButton(
-                    child: const Text('Logout', style: TextStyle(fontSize: 18)),
+                    child: const Text('Edit',
+                        style:
+                            TextStyle(fontSize: 18, color: Colors.blueAccent)),
+                    onPressed: () => dashboardState.edit(),
+                  ),
+                ),
+                Card(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8),
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: TextButton(
+                    child: Text('Logout',
+                        style: TextStyle(fontSize: 18, color: Colors.red[300])),
                     onPressed: () => dashboardState.logout(),
                   ),
                 ),
